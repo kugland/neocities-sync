@@ -33,11 +33,11 @@ def parse(args: List[str]) -> CmdlineOptions:
         Command line options.
 
     >>> parse(['-C', 'myconf', '-qqq', '--dry-run', '--site=foo.com', '--site=bar.com'])
-    CmdlineOptions(sites=['foo.com', 'bar.com'], quietness=3, dry_run=True, config_file='myconf')
+    CmdlineOptions(sites=['foo.com', 'bar.com'], quietness=3, dry_run=True, config_file='myconf', help=False)
     >>> parse(['-C', 'myconf', '-v', '--site=foo.com', '--site=bar.com'])
-    CmdlineOptions(sites=['foo.com', 'bar.com'], quietness=-1, dry_run=False, config_file='myconf')
+    CmdlineOptions(sites=['foo.com', 'bar.com'], quietness=-1, dry_run=False, config_file='myconf', help=False)
     >>> parse(['-C', 'myconf', '-vvqds', 'site'])
-    CmdlineOptions(sites=['site'], quietness=-1, dry_run=True, config_file='myconf')
+    CmdlineOptions(sites=['site'], quietness=-1, dry_run=True, config_file='myconf', help=False)
     """
     argparser = ArgumentParser(
         description="Sync local directories with a neocities.org remote.",

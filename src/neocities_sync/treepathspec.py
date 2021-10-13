@@ -83,11 +83,9 @@ class TreePathSpec:
 
         >>> spec = TreePathSpec('.', '.testignore')
         >>> spec._load_pathspec('/txt', ['*.txt', '!allowed.txt'])
-        >>> spec.pathspec_list[0][0]
-        '/txt'
-        >>> spec.pathspec_list[0][1].match_file('/txt/test.txt')
+        >>> spec.match('/txt/test.txt')
         True
-        >>> spec.pathspec_list[0][1].match_file('/txt/allowed.txt')
+        >>> spec.match('/txt/allowed.txt')
         False
         """
         self.__pathspec_list.append((spec_root, PathSpec.from_lines("gitwildmatch", lines)))
