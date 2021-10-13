@@ -79,4 +79,4 @@ In any subdirectory of the root directory, a file named `.neocitiesignore`    ca
 
 ## Credits:
 
-This software was developed by Andre Kugland <kugland@gmail.com>.
+This software was developed by Andre Kugland &lt;kugland@gmail.com&gt;.
